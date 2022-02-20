@@ -1,0 +1,39 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "strictNullChecks": false,
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "declaration": true,
+    "outDir": "dist",
+    "strict": true,
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "allowJs": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "emitDecoratorMetadata": true,
+    "baseUrl": ".",
+    "rootDir": "./",
+    "paths": {
+      "@services/*": ["src/services/*"],
+      "@loggers/*": ["src/loggers/*"],
+      "@jobs/*": ["src/jobs/*"],
+      "@interfaces/*": ["src/interfaces/*"],
+      "@constants/*": ["src/constants/*"],
+      "@queues": ["src/services/queues/queues.ts"],
+      "@routes": ["src/routes/index.ts"],
+      "@localHostEnvVars": ["config/localHostEnvVars.js"],
+      "@envVars": ["src/envVars.ts"],
+      "@rollbar": ["src/rollbar.ts"],
+      "@/*": ["src/*"],
+      "*.ts": ["*"]
+    }
+  },
+  "lib": ["es2015"],
+  "include": ["src/**/*", "config/**/*"],
+  "exclude": ["node_modules", "**/__tests__/*"]
+}
